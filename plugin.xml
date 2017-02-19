@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-dialog" version="0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>dialog</name>
+    <AUTHOR>Maple</AUTHOR>
+    <js-module name="dialog" src="www/dialog.js">
+        <clobbers target="cordova.plugins.dialog" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="HndevDialog">
+                <param name="ios-package" value="HndevDialog" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/HndevDialog.h" />
+        <source-file src="src/ios/HndevDialog.m" />
+    </platform>
+</plugin>
